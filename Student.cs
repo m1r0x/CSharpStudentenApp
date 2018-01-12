@@ -13,10 +13,11 @@ namespace CSharpStudentenApp
             get; set;
         }
 
-        void GetNotendurchscnitt(List<Testresultat> resultate)
+        public GetNotendurchschnitt(List<Testresultat> resultate)
         {
-            double durchschnitt = 
+            double durchschnitt = resultate.Average(innerList => innerList[0]);
+
+            return;
         }
-        
     }
 }
