@@ -13,11 +13,12 @@ namespace CSharpStudentenApp
             Schule ibz = new Schule();
             ibz.Standort = "Aarau";
 
-            Student s = new Student();
-            s.Noten.Add(new Testresultat(5.0));
-            s.Noten.Add(new Testresultat(3.3));
+            Student michael = new Student("Michael", "Stratighiou");
+            michael.Noten.Add(new Testresultat(5.0));
+            michael.Noten.Add(new Testresultat(3.3));
+            michael.Noten.Add(new Testresultat(1.5));
 
-
+            Console.WriteLine(michael.GetNotendurchschnitt().ToString());
 
         }
     }

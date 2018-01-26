@@ -6,18 +6,26 @@ using System.Threading.Tasks;
 
 namespace CSharpStudentenApp
 {
-    class Student
+    class Student : Person
     {
+
         public List<Testresultat> Noten
         {
             get; set;
         }
 
-        public GetNotendurchschnitt(List<Testresultat> resultate)
-        {
-            double durchschnitt = resultate.Average(innerList => innerList[0]);
+        double durchschnitt;
 
-            return;
+        public Student(string _vorname, string _name)
+        {
+            this.Vorname = _vorname;
+            this.Name = _name;
+        }
+
+        public double GetNotendurchschnitt(List<Testresultat> resultate)
+        {
+            durchschnitt = Noten.Average();
+            Console.WriteLine(durchschnitt.ToString);
         }
     }
 }
