@@ -9,23 +9,17 @@ namespace CSharpStudentenApp
     class Student : Person
     {
 
-        public List<Testresultat> Noten
+        public List<Testresultat> Resultate { get; set; }
+
+        public Student(string vorname, string nachname) : base(vorname,nachname)
         {
-            get; set;
+            this.Resultate = new List<Testresultat>();
         }
 
-        double durchschnitt;
-
-        public Student(string _vorname, string _name)
+        public double GetNotendurchschnitt()
         {
-            this.Vorname = _vorname;
-            this.Name = _name;
-        }
-
-        public double GetNotendurchschnitt(List<Testresultat> resultate)
-        {
-            durchschnitt = Noten.Average();
-            Console.WriteLine(durchschnitt.ToString);
+            double RatingAverage = Resultate.Average(r => r.Note);
+            return RatingAverage;
         }
     }
 }

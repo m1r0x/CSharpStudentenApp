@@ -8,6 +8,12 @@ namespace CSharpStudentenApp
 {
     class Schule
     {
-        public string Standort;
+        public string Standort { get; set; }
+        public List<Klasse> Klassen { get; set; }
+    }
+
+    public Schule()
+    {
+        this.Klassen = new List<Klasse>();
     }
 }

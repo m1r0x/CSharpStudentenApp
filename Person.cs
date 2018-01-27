@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace CSharpStudentenApp
 {
-    class Person
+    abstract class Person
     {
-        public string Name;
-        public string Vorname;
+        public string Nachname { get; set; }
+        public string Vorname { get; set; }
+
+        public Person(string vorname, string nachname)
+        {
+            this.Vorname = vorname;
+            this.Nachname = nachname;
+        }
     }
 }

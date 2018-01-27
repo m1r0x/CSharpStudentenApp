@@ -8,5 +8,6 @@ namespace CSharpStudentenApp
 {
     class Dozent : Person
     {
+        
     }
 }

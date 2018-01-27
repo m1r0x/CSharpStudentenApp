@@ -8,10 +8,6 @@ namespace CSharpStudentenApp
 {
     class Testresultat
     {
-        public double Note;
-        public Testresultat(double d)
-        {
-            Note = d;
-        }
+        public double Note { get; set; }
     }
 }
